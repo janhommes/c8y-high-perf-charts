@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "high-perf"
+    }
+  },
+  "defaultProject": "high-perf",
+  "cli": {
+    "analytics": false
+  }
 }
