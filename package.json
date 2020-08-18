@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~9.1.7",
     "@angular/platform-browser-dynamic": "~9.1.7",
     "@angular/router": "~9.1.7",
+    "lodash-es": "^4.17.15",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "uplot": "^1.1.0",

@@ -1,18 +1,18 @@
 <!--<pre>{{timeRange[0] | date:'mediumTime'}} - {{timeRange[1] | date:'mediumTime'}}</pre>-->
 <label>
-  realtime <input type="checkbox" (change)="realtime=$event.target.checked">
+  realtime <input type="checkbox" (change)="realtime = $event.target.checked" />
 </label>
-<c8y-time-range (range)="timeRange=$event"></c8y-time-range>
-<ng-container *ngFor="let dataItem of dataList;">
+<c8y-time-range (range)="timeRange = $event">
+  <ng-container *ngFor="let dataItem of dataList">
+    <c8y-data [realtime]="realtime" [selectedRange]="timeRange">
+      <c8y-time-range>
+        <c8y-chart> </c8y-chart>
+      </c8y-time-range>
+    </c8y-data>
+    <pre *ngIf="dataItem.range">
 
-	<c8y-data [realtime]="realtime" [selectedRange]="timeRange">
 
-		<c8y-chart [realtime]="realtime">
-		</c8y-chart>
-	</c8y-data>
-	<pre *ngIf="dataItem.range">
-
-
- <!--{{dataItem.range[0] | date:'mediumTime'}} - {{dataItem.range[1] | date:'mediumTime'}}--> 
-  </pre>
-</ng-container>
+	<!--{{dataItem.range[0] | date:'mediumTime'}} - {{dataItem.range[1] | date:'mediumTime'}}--> 
+		</pre>
+  </ng-container>
+</c8y-time-range>
